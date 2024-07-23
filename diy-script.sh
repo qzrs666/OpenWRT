@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#修改内核版本
+sed -i 's/KERNEL_PATCHVER:=5.15' target/linux/rockchip/Makefile
+
 # 修改默认IP
 sed -i 's/192.168.1.1/192.168.11.1/g' package/base-files/files/bin/config_generate
 
